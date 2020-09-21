@@ -1,0 +1,13 @@
+extend layout.pug
+
+block content
+  section#content
+    h2 Welcome, to my sandbox where I practice Express & Pug!
+    table
+      tr
+        td First Name
+        td Last Name
+      each person in people
+        tr
+          td #{person.fName}
+          td= person.lName
