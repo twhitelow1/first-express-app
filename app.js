@@ -11,7 +11,11 @@ app.use(cookieParser());
 
 app.set('view engine', 'pug');
 
+const mainRoutes = require('./routes');
+const cardRoutes = require('./routes/cards');
 
+app.use(mainRoutes);
+app.use('/cards', cardRoutes)
 
 app.use((err, req, res, next) => {
   res.locals.error = err;

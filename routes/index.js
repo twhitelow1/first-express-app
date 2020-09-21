@@ -11,10 +11,6 @@ router.get('/', (req, res) => {
     res.redirect('/signin');
 });
 
-router.get('/card', (req, res) => {
-  res.render('card', { prompt: "Who is buried in Grants tomb?" });
-});
-
 router.get('/sandbox', (req, res) => {
   res.render('sandbox', { people })
 })
