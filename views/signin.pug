@@ -1,7 +1,7 @@
-extends layout
+extends app
 
-block content
-  form(action='/signin', method='post')
-    label Plese enter your name:
-      input(type='text', name='username')
-    button(type='submit') Submit
+block intro
+  form.namecard-form(action='/signin', method='post')
+    label.namecard-prompt Plese enter your name:
+      input.namecard-name(type='text', name='username')
+    button.namecard-submit(type='submit') Submit
