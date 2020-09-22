@@ -40,7 +40,10 @@ app.use((err, req, res, next) => {
 });
 
 // Start Server
-
-app.listen(3000, () => {
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000
+}
+app.listen(port, () => {
   console.log('The application is running on locahost:3000!')
 });
